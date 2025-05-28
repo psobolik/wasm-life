@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Conway's Game of Life in Rust/WASM"
 license = "MIT OR Apache-2.0"
 authors = ["Paul Sobolik <psobolik@zoho.com>"]
+repository = "https://github.com/psobolik/wasm-life"
 edition = "2018"
 
 [lib]

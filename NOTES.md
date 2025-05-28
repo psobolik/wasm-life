@@ -28,11 +28,19 @@ The app is served at the following URLs:
 ```shell
 > pnpm bundle
 ```
-To install on pop-os, copy the files.
+To install locally, copy the dist folder and its contents to the target folder.
 ```shell
-$ sudo rcp -r ./dist/ /var/www/html/life
+$ sudo rcp -r ./dist /var/www/html/wasm-life
 ```
-To install on tilde.team, copy the files.
+To update locally, copy the files in the dist folder to the target folder.
 ```shell
-$ rcp -r ./dist tilde.team:~/public_html/life
+$ sudo rcp -r ./dist/* /var/www/html/wasm-life
+```
+To install on tilde.team the first time, copy the dist folder and its contents to the target folder.
+```shell
+$ rcp -r ./dist tilde.team:~/public_html/wasm-life
+```
+To update the files on tilde.team, copy the files in the dist folder to the target folder.
+```shell
+$ rcp -r ./dist/* tilde.team:~/public_html/wasm-life
 ```

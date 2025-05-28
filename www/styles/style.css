@@ -60,3 +60,11 @@ textarea {
     margin: 1.25em 0;
     width: 100%;
 }
+footer {
+    margin-top: 1em;
+    text-align: center;
+    & a {
+        font-size: xx-small;
+        color: lightblue;
+    }
+}
