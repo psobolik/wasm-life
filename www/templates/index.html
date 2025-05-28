@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<header>Conway's Game of Life</header>
+<div class="center"><span id="generations"></span></div>
+<canvas id="canvas"></canvas>
+<div class="button-grid center">
+    <span id="play" class="svgButton" title="Start [space]" style="grid-area: pl"><svg><use
+            xlink:href="./symbols.svg#play"></use></svg></span>
+    <span id="pause" class="svgButton" title="Stop [space]" style="grid-area: pl"><svg><use
+            xlink:href="./symbols.svg#pause"></use></svg></span>
+    <span id="step" class="svgButton" title="Step [s]" style="grid-area: st"><svg><use
+            xlink:href="./symbols.svg#forward-step"></use></svg></span>
+    <span id="random" class="svgButton" title="Insert Random Pattern [r]" style="grid-area: rn"><svg><use
+            xlink:href="./symbols.svg#random"></use></svg></span>
+    <span id="clear" class="svgButton" title="Clear Grid [c]" style="grid-area: cl"><svg><use
+            xlink:href="./symbols.svg#grid-3x3"></use></svg></span>
+    <span id="rotateCw" class="svgButton" title="Rotate Pattern Clockwise [F1]" style="grid-area: rr"><svg><use
+            xlink:href="./symbols.svg#arrow-rotate-right"></use></svg></span>
+    <span id="rotateCcw" class="svgButton" title="Rotate Pattern Counterclockwise [F2]" style="grid-area: rl"><svg><use
+            xlink:href="./symbols.svg#arrow-rotate-left"></use></svg></span>
+    <span id="flipHoriz" class="svgButton" title="Flip Pattern Horizontally [F3]" style="grid-area: fh"><svg><use
+            xlink:href="./symbols.svg#arrow-down-up"></use></svg></span>
+    <span id="flipVert" class="svgButton" title="Flip Pattern Vertically [F4]" style="grid-area: fv"><svg><use
+            xlink:href="./symbols.svg#arrow-left-right"></use></svg></span>
+    <span id="shiftUp" class="svgButton" title="Shift pattern up" style="grid-area: up"><svg><use
+            xlink:href="./symbols.svg#arrow-up"></use></svg></span>
+    <span id="shiftLeft" class="svgButton" title="Shift pattern left" style="grid-area: lf"><svg><use
+            xlink:href="./symbols.svg#arrow-left"></use></svg></span>
+    <span id="shiftDown" class="svgButton" title="Shift pattern down" style="grid-area: dn"><svg><use
+            xlink:href="./symbols.svg#arrow-down"></use></svg></span>
+    <span id="shiftRight" class="svgButton" title="Shift pattern right" style="grid-area: rt"><svg><use
+            xlink:href="./symbols.svg#arrow-right"></use></svg></span>
+</div>
+<div class="doc-picker center">
+    <textarea id="pattern"></textarea>
+    <label for="docPicker" class="doc-picker">Select file</label>
+    <input type="file" id="docPicker" style="display:none" accept=".cells,.rle"/>
+</div>
+</body>
+</html>

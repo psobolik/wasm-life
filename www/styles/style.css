@@ -1,0 +1,62 @@
+body {
+    background-color: #202000;
+    font-family: sans-serif;
+    color: white;
+}
+header {
+    width: 800px;
+    margin: auto;
+    padding: 0.25em;
+    font-size: xx-large;
+    text-align: center;
+    color: yellow;
+}
+canvas#canvas {
+    cursor: crosshair;
+    display: block;
+    margin: 0.25em auto;
+}
+div.center {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+label.doc-picker {
+    padding: 0.25em 0.5em;
+    border: solid yellow 1px;
+
+    &:hover {
+        background-color: #444;
+    }
+}
+div.button-panel {
+    width: 800px;
+    margin: auto;
+
+    & input[type=button] {
+        width: 13em;
+    }
+}
+div.button-grid {
+    display: grid;
+    padding: 0.5em;
+
+    width: 300px;
+    grid-template-areas:
+        "pl st .  up .  rn cl"
+        "rr rl lf dn rt fv fh";
+    grid-auto-columns: 1fr;
+
+    & span.svgButton svg {
+        fill: yellow;
+        width: 28px;
+        height: 28px;
+        &:hover {
+            fill: yellowgreen;
+        }
+    }
+}
+textarea {
+    margin: 1.25em 0;
+    width: 100%;
+}
